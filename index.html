@@ -4,17 +4,17 @@
     <title>bundle</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" /> //https://username.io/
-  <link rel="preload" href="/dioxus_demo_deploy/wasm/bundle_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-            <link rel="preload" href="/dioxus_demo_deploy/wasm/bundle.js" as="script">
+    <meta charset="UTF-8" />
+  <link rel="preload" href="/./wasm/bundle_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+            <link rel="preload" href="/./wasm/bundle.js" as="script">
             </head>
   <body>
     <div id="main"></div>
   <script>
             // We can't use a module script here because we need to start the script immediately when streaming
-            import("/dioxus_demo_deploy/wasm/bundle.js").then(
+            import("/./wasm/bundle.js").then(
                 ({ default: init }) => {
-                init("/dioxus_demo_deploy/wasm/bundle_bg.wasm").then((wasm) => {
+                init("/./wasm/bundle_bg.wasm").then((wasm) => {
                     if (wasm.__wbindgen_start == undefined) {
                     wasm.main();
                     }
